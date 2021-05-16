@@ -1,16 +1,20 @@
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import Main from "./Main";
-import User from "./User";
+import { indexRoutes } from "./Utils/Constant";
 
 export default function App() {
   return (
     <Router>
       <Switch>
-        <Route
-          path="/user/:id"
-          component={(props) => <User {...props} />}
-        ></Route>
-        <Route path="/" component={(props) => <Main {...props} />}></Route>
+        {indexRoutes.map((prop, key) => {
+          return (
+            <Route
+              path={prop.path}
+              key={key}
+              component={prop.component}
+              exact
+            />
+          );
+        })}
       </Switch>
     </Router>
   );
