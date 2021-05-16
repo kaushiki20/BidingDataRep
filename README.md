@@ -1,3 +1,9 @@
+#Initiation
+- npm i to install all dependency 
+- npm start to start the project
+
+
+#GENERAL
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
